@@ -1,0 +1,51 @@
+@import '../../style/variables.scss';
+
+.card{
+  position: relative;
+  max-width: 332px;
+  border-radius: 4px;
+  background-color: $whiteBackGroundColor;
+  color:$textColor;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.04));
+  cursor: pointer;
+  &__img{
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  &__info {
+    padding: 16px;
+  }
+  &__title{
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 600;
+  }
+  &__descr{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+  }
+  &__price{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+  &__btn_delete{
+    display: none;
+  }
+  &:hover{
+    .card__btn_delete{
+        display: block;
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+        background-color: $redColor;
+    }
+  }
+}

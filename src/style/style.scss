@@ -1,0 +1,26 @@
+@import "normalize.scss";
+@import "reset.scss";
+@import "variables";
+
+
+body{
+  background-color: $whiteE5Color;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#root{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+main{
+  display:flex;
+  align-items: flex-start;
+}
+
+.card__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}

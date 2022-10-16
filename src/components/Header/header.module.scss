@@ -1,0 +1,29 @@
+@import '../../style/variables.scss';
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title{
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 600;
+}
+
+.select{
+  position: relative;
+  padding: 10px 21px 10px 16px;
+  border-right: 4px;
+  background-color: $whiteBackGroundColor;
+  color: $greyColor;
+  border: none;
+  border-radius: 4px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0, 0.1));
+  appearance: none;
+  background-image: url("arrow.svg");
+  background-repeat: no-repeat;
+  background-position:94% 18px;
+}
