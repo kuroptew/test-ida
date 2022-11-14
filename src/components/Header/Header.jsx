@@ -1,15 +1,24 @@
 import React from 'react';
 import classes from './header.module.scss'
 
-const Header = () => {
+const Header = ({sort, onUpdateSort}) => {
   return (
     <header className={classes.header}>
-      <h2 className={classes.title}>Добавление товара</h2>
-      <select name="" id="" className={classes.select}>
-        <option value="">По умолчанию</option>
-        <option value="">По убыванию цены</option>
-        <option value="">По возрастанию цены</option>
-      </select>
+      <h1 className={classes.title}>Добавление товара</h1>
+      <div>
+        <select name=""
+                id=""
+                className={classes.select}
+                value={sort}
+                onChange={event => onUpdateSort(event.target.value)}
+        >
+          <option value="">По умолчанию</option>
+          <option value="name">По наименованию</option>
+          <option value="min">По убыванию цены</option>
+          <option value="max">По возрастанию цены</option>
+        </select>
+        <span></span>
+      </div>
     </header>
   );
 };

@@ -4,11 +4,11 @@
 
 
 body{
-  background-color: $whiteE5Color;
+  background-color: $whiteBackGroundColor;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-#root{
+.container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 32px;

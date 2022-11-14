@@ -2,57 +2,60 @@ import Form from "../Form/Form";
 import Header from "../Header/Header";
 import {useState} from "react";
 import CardList from "../CardList/CardList";
-import cardItem from "../CardItem/CardItem";
+import {useSortedCards} from "../../hooks/useSortedCards";
+import img from '../../img/img-card.png'
+
 
 function App() {
   const [cards, setCards] = useState(
     [
       {
         name: 'Наименование товара',
-        img:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Practica_L2_camera_front.jpg',
-        price: 10000,
+        img: img,
+        price: '10 000',
         descr: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-        id:1,
+        id: 1,
       },
       {
         name: 'Наименование товара',
-        img:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Practica_L2_camera_front.jpg',
-        price: 15000,
+        img: img,
+        price: '15 000',
         descr: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-        id:2,
+        id: 2,
       },
       {
         name: 'Наименование товара',
-        img:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Practica_L2_camera_front.jpg',
-        price: 12000,
+        img: img,
+        price: '12 000',
         descr: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-        id:3,
+        id: 3,
       },
       {
         name: 'Наименование товара',
-        img:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Practica_L2_camera_front.jpg',
-        price: 13000,
+        img: img,
+        price: '13 000',
         descr: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-        id:4,
+        id: 4,
       },
       {
         name: 'Наименование товара',
-        img:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Practica_L2_camera_front.jpg',
-        price: 14000,
+        img: img,
+        price: '14 000',
         descr: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-        id:5,
+        id: 5,
       },
       {
         name: 'Наименование товара',
-        img:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Practica_L2_camera_front.jpg',
-        price: 22000,
+        img: img,
+        price: '22 000',
         descr: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-        id:6,
+        id: 6,
       },
     ]
   )
 
-  const [filter,setFilter]=useState('')
+  const [sort, setSort] = useState('')
+  const sortedCars = useSortedCards(cards, sort)
 
   const createCard = (newCard) => {
     setCards([...cards, newCard])
@@ -62,14 +65,18 @@ function App() {
     setCards(cards.filter(elem => elem.id !== card.id))
   }
 
+  const onUpdateSort = (sort) => {
+    setSort(sort)
+  }
+
   return (
-    <>
-      <Header/>
+    <div className='container'>
+      <Header sort={sort} onUpdateSort={onUpdateSort}/>
       <main>
         <Form create={createCard}/>
-        <CardList cards={cards} remove={removeCard}/>
+        <CardList cards={sortedCars} remove={removeCard}/>
       </main>
-    </>
+    </div>
   );
 }
 

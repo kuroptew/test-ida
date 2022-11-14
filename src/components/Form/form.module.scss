@@ -1,40 +1,49 @@
 @import '../../style/variables.scss';
 
-.form{
+.form {
   width: 332px;
   margin-right: 16px;
   padding: 24px;
   border-radius: 4px;
   background-color: $whiteBackGroundColor;
-  & label{
-    margin-bottom: 4px;
-    &[data-required='true']::after{
-      content: '';
-      display: inline-block;
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background-color: $redColor;
-      border-radius: 50%;
-    }
-  }
-  & input {
-    width: 100%;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+
+  .wrapper__input{
     margin-bottom: 16px;
+    .input__label {
+      display: inline-block;
+      margin-bottom: 4px;
+
+      &[aria-required]::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: $redColor;
+        border-radius: 50%;
+      }
+    }
+}
+
+  &__input {
+    width: 100%;
     padding: 10px 16px;
     font-size: 12px;
     line-height: 15px;
     font-weight: 400;
     border: none;
     border-radius: 4px;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0, 0.1));
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
     color: $textColor;
+
     &::-webkit-input-placeholder {
       color: $greyColor;
       font-size: 12px;
       line-height: 15px;
       font-weight: 400;
     }
+
     ::-moz-placeholder {
       color: $greyColor;
       font-size: 12px;
@@ -43,7 +52,7 @@
     }
   }
 
-  & textarea {
+  &__textarea {
     display: block;
     width: 100%;
     min-height: 108px;
@@ -55,14 +64,16 @@
     font-weight: 400;
     border: none;
     border-radius: 4px;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0, 0.1));
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
     color: $textColor;
+
     &::-webkit-input-placeholder {
       color: $greyColor;
       font-size: 12px;
       line-height: 15px;
       font-weight: 400;
     }
+
     ::-moz-placeholder {
       color: $greyColor;
       font-size: 12px;
@@ -70,7 +81,8 @@
       font-weight: 400;
     }
   }
-  & button{
+
+  &__button {
     width: 100%;
     padding: 10px 16px;
     border-radius: 10px;
@@ -81,7 +93,8 @@
     font-weight: 600;
     background-color: $successGreenColor;
     color: $whiteFFColor;
-    &:disabled{
+
+    &:disabled {
       background-color: $greyEEColor;
       color: $greyColor;
     }
