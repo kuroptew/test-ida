@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/test-ida/static/css/main.e752c978.css",
+    "main.js": "/test-ida/static/js/main.ad415b13.js",
+    "static/media/img-card.png": "/test-ida/static/media/img-card.537c721b469e115a6e2e.png",
+    "index.html": "/test-ida/index.html",
+    "static/media/arrow.svg": "/test-ida/static/media/arrow.20341b0ecdce2b9e4256.svg",
+    "main.e752c978.css.map": "/test-ida/static/css/main.e752c978.css.map",
+    "main.ad415b13.js.map": "/test-ida/static/js/main.ad415b13.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e752c978.css",
+    "static/js/main.ad415b13.js"
+  ]
+}
