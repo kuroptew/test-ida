@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/test-ida/static/css/main.36383358.css",
+    "main.css": "/test-ida/static/css/main.4033a0de.css",
     "main.js": "/test-ida/static/js/main.9068e9a5.js",
     "static/media/img-card.png": "/test-ida/static/media/img-card.537c721b469e115a6e2e.png",
     "index.html": "/test-ida/index.html",
     "static/media/arrow.svg": "/test-ida/static/media/arrow.20341b0ecdce2b9e4256.svg",
-    "main.36383358.css.map": "/test-ida/static/css/main.36383358.css.map",
+    "main.4033a0de.css.map": "/test-ida/static/css/main.4033a0de.css.map",
     "main.9068e9a5.js.map": "/test-ida/static/js/main.9068e9a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.36383358.css",
+    "static/css/main.4033a0de.css",
     "static/js/main.9068e9a5.js"
   ]
 }
