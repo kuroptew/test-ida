@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import classes from "./card.module.scss";
-//import imgProduct from '../../img/img-card.png';
 
 const CardItem = ({ name, descr, price, img, remove, card, }) => {
   return (
@@ -13,7 +10,7 @@ const CardItem = ({ name, descr, price, img, remove, card, }) => {
         <div className={classes.card__info}>
           <h3 className={classes.card__title}>{name}</h3>
           <p className={classes.card__descr}>{descr}</p>
-          <span className={classes.card__price}>{price} руб.</span>
+          <span className={classes.card__price}>{Number(price.replace(/\D/g, '')).toLocaleString('ru')} руб.</span>
         </div>
         <button className={classes.card__btn_delete} onClick={() => { remove(card) }}>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

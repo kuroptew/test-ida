@@ -21,9 +21,12 @@
   color: $greyColor;
   border: none;
   border-radius: 4px;
-  filter: drop-shadow(0 2px 5px rgba(0,0,0, 0.1));
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   appearance: none;
   background-image: url("arrow.svg");
   background-repeat: no-repeat;
-  background-position:94% 18px;
+  background-position:94% 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 }
